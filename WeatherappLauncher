@@ -1,0 +1,15 @@
+import javax.swing.*;
+
+public class WeatherappLauncher {
+    public static void main(String[] args) {
+        new WeatherappLauncher();
+
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // new WeatherappLauncher().setVisisble(true);
+                System.out.println(WeatherApp1.getLocationData("Tokyo"));
+                System.out.println(WeatherApp1.getCurrentTime());
+            }
+        });
+    }
